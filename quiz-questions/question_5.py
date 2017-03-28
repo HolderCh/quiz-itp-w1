@@ -29,4 +29,12 @@ def calculate_tax(income):
     calculate_tax(income)  # $210,000 * 0.35 = 73500 = $73,500
     """
     # Write your code here
-    pass
+    if income <= 50000:
+        tax = income * .15
+    elif income <= 75000:
+        tax = income * .25
+    elif income <= 100000:
+        tax = income * .30
+    elif income > 100000:
+        tax = income * .35
+    return tax
